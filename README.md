@@ -41,7 +41,7 @@ raw number), and then translates it into any target language you pick.
 ## 🏗️ Architecture
 
 <div align="center">
-<img width="1024" height="1536" alt="ChatGPT Image Aug 11, 2026, 04_07_13 PM" src="https://github.com/user-attachments/assets/7f77a680-dbe1-4f81-ae1a-e50f22e62db0" />
+<img width="1024" height="1536" alt="ChatGPT Image Aug 11, 2026, 04_11_49 PM" src="https://github.com/user-attachments/assets/4243011f-7f27-47bd-96fe-80973cf645ff" />
 
 
 </div>
@@ -184,17 +184,7 @@ Input → Validation → Script Analysis → NB (22 classes) → FastText (176 c
 
 ## 🌐 Translation pipeline
 
-```
-Detected Language + Target Language
-   ↓
-Level 1 → Direct opus-mt-{src}-{tgt} model
-   ↓ (if unavailable)
-Level 2 → tc-big model
-   ↓ (if unavailable)
-Level 3 → Pivot: src → English → target
-   ↓
-Translated Text
-```
+<img width="1024" height="1536" alt="ChatGPT Image Aug 11, 2026, 04_13_39 PM" src="https://github.com/user-attachments/assets/99ae2814-8a5e-44b2-8d7b-58bf8d082842" />
 
 Models load **lazily** (only when a translation is actually requested) and are cached per
 `(source, target)` pair, so the same pair is never re-downloaded or re-instantiated twice
