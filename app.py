@@ -735,7 +735,7 @@ except Exception as exc:  # noqa: BLE001
 col1, col2 = st.columns([1.1, 0.9], gap="large")
 
 with col1:
-    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    #st.markdown('<div class="glass-card">', unsafe_allow_html=True)
     st.markdown('<div class="section-label">✍️ Input Text</div>', unsafe_allow_html=True)
 
     st.text_area(
@@ -771,7 +771,7 @@ with col1:
     with b2:
         st.button("🗑️ Clear", use_container_width=True, on_click=clear_input)
 
-    st.markdown('</div>', unsafe_allow_html=True)
+    #st.markdown('</div>', unsafe_allow_html=True)
 
     st.markdown('<div class="section-label" style="margin-top:1rem">⚡ Try Examples</div>', unsafe_allow_html=True)
     ex_cols = st.columns(len(EXAMPLES))
@@ -805,7 +805,7 @@ if translate_btn and models_ok:
                 st.session_state.translation = (translated, tstatus)
 
 with col2:
-    st.markdown('<div class="glass-card" style="min-height: 420px;">', unsafe_allow_html=True)
+    #st.markdown('<div class="glass-card">', unsafe_allow_html=True)
     st.markdown('<div class="section-label">📊 Results</div>', unsafe_allow_html=True)
 
     result = st.session_state.result
