@@ -41,42 +41,8 @@ raw number), and then translates it into any target language you pick.
 ## 🏗️ Architecture
 
 <div align="center">
+<img width="2720" height="3480" alt="linguadetect_full_architecture" src="https://github.com/user-attachments/assets/d4944603-40cf-452c-a42f-e326cf3fc580" />
 
-```
-                    USER
-                     │
-                     ▼
-              Streamlit UI
-                     │
-                     ▼
-              Text / Script Checks
-                     │
-                     ▼
-      ┌───────────────────────────┐
-      │      Language Detection    │
-      └──────────────┬─────────────┘
-                     │
-         ┌───────────┴───────────┐
-         ▼                       ▼
-   NB Pipeline               FastText
-  TF-IDF + NB               lid.176.ftz
-         │                       │
-         └───────────┬───────────┘
-                     ▼
-           Confidence Fusion
-                     │
-                     ▼
-            Detected Language
-                     │
-                     ▼
-             Target Language
-                     │
-                     ▼
-              MarianMT / HF
-                     │
-                     ▼
-             Translated Text
-```
 
 </div>
 
